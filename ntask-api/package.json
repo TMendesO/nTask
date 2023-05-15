@@ -1,0 +1,46 @@
+{
+  "name": "ntask-api",
+  "version": "1.0.0",
+  "description": "Api de gestão de tarefas",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run apidoc && npm run cluster",
+    "server": "node index.js",
+    "cluster": "node clusters.js",
+    "apidoc": "apidoc -i routes/ -o public/apidoc",
+    "test": "SET NODE_ENV=test&& mocha test/**/*.js"
+  },
+  "apidoc": {
+    "name": "Documentação - Node Task API",
+    "template": {
+      "forceLanguage": "pt_br"
+    }
+  },
+  "author": "Thiago Mendes",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "compression": "^1.7.4",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.2",
+    "helmet": "^6.1.5",
+    "jsonwebtoken": "^9.0.0",
+    "jwt-simple": "^0.5.6",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.2.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.29.3",
+    "sqlite3": "^5.1.6",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "apidoc": "^0.54.0",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
